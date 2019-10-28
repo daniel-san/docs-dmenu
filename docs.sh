@@ -1,5 +1,8 @@
 #!/bin/bash
 
+BASE=$(readlink -f $0)
+BASE_DIR=$(dirname "$BASE")
+
 # Colors and customization
 BACKGROUND='#c93648'
 FOREGROUND=''
@@ -11,8 +14,7 @@ PROMPT='Select: '
 BROWSER='firefox'
 
 
-
-python devdocs.py laravel:$1 | \
+python $BASE_DIR/devdocs.py laravel:$1 | \
     dmenu -i -l 20 \
     -fn $FONT \
     -sb $BACKGROUND \
