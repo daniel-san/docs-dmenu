@@ -6,6 +6,7 @@ languages = {
     'laravel': {
         'url': 'https://laravel.com/api/',
         'default': '6.x',
+        'rule': { 'class': 'namespace-container' },
     },
     'python': {}
 }
